@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\C#Ex\\EShop\\EShop\\EShop.csproj": {}
+    "D:\\git\\EShop\\src\\EShop\\EShop.csproj": {}
   },
   "projects": {
-    "D:\\C#Ex\\EShop\\EShop\\EShop.csproj": {
+    "D:\\git\\EShop\\src\\EShop\\EShop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\C#Ex\\EShop\\EShop\\EShop.csproj",
+        "projectUniqueName": "D:\\git\\EShop\\src\\EShop\\EShop.csproj",
         "projectName": "EShop",
-        "projectPath": "D:\\C#Ex\\EShop\\EShop\\EShop.csproj",
+        "projectPath": "D:\\git\\EShop\\src\\EShop\\EShop.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "D:\\C#Ex\\EShop\\EShop\\obj\\",
+        "outputPath": "D:\\git\\EShop\\src\\EShop\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
