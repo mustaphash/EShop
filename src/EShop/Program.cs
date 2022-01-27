@@ -1,3 +1,9 @@
+using Core.Entity;
+using Core.Queries;
+using DAL;
+using DAL.Queries;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +12,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ShopContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnectionStrings")));
+
+builder.Services.AddScoped<IQueryHandler<GetAllShopsQuery, IList<Shop>>, GetAllShopsQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetAllProductsQuery, IList<Product>>, GetAllProductsQueryHandler>();
+builder.Services.AddScoped<IQueryHandler<GetAllClientsQuery, IList<Client>>, GetAllClientsQueryHandler>();
 
 var app = builder.Build();
 
