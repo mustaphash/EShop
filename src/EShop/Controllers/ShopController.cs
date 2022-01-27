@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EShop.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("shops")]
     public class ShopController : ControllerBase
     {
         private readonly IQueryHandler<GetAllShopsQuery, IList<Shop>> _getAllShopsQuery;
@@ -16,7 +16,7 @@ namespace EShop.Controllers
             _getAllShopsQuery = getAllShopsQuery;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "GetAllShops")]
         public async Task<IActionResult> GetAllShops()
         {
             IList<Shop> shops = await _getAllShopsQuery.HandleAsync(new GetAllShopsQuery());
