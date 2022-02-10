@@ -9,5 +9,8 @@
         public string Color { get; set; }
         public DateTime ManufactureDate { get; set; }
         public int Count { get; set; }
+
+        public ICollection<Shop> Shops { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }

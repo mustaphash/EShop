@@ -8,5 +8,6 @@
         public string Adress { get; set; }
         public string Gender { get; set; }
         public string Age { get; set; }
+        public ICollection<Order> Orders { get; set; }
     }
 }
