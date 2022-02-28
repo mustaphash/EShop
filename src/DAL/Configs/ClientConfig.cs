@@ -14,7 +14,7 @@ namespace DAL.Configs
             builder.Property(c => c.LastName).HasMaxLength(250).IsRequired();
             builder.Property(c => c.Adress).IsRequired();
             builder.Property(c => c.Gender).IsRequired();
-            builder.Property(c => c.Age).IsRequired();
+            builder.Property(c => c.BirthDate).IsRequired();
         }
     }
 }
