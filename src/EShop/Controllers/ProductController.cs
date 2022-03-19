@@ -16,7 +16,7 @@ namespace EShop.Controllers
             _getAllProductsQuery = getAllProductsQuery;
         }
 
-        [HttpGet(Name = "GetAllProducts")]
+        [HttpGet]
         public async Task<IActionResult> GetAllProducts()
         {
             IList<Product> products = await _getAllProductsQuery.HandleAsync(new GetAllProductsQuery());
